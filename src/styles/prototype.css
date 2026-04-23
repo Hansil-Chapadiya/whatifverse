@@ -1,0 +1,228 @@
+.page {
+  width: min(1100px, 100% - 2rem);
+  margin: 0 auto;
+  padding: 1rem 0 3rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.layout-main,
+.layout-side {
+  min-width: 0;
+}
+
+.stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.stack-sm {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.card {
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  background: #0b1220;
+  padding: 1rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.subtitle {
+  color: #94a3b8;
+}
+
+textarea,
+input {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  padding: 0.7rem 0.8rem;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+textarea:focus,
+input:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 1px;
+}
+
+.examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  border: 1px solid #334155;
+  border-radius: 999px;
+  background: #0f172a;
+  color: #cbd5e1;
+  padding: 0.3rem 0.8rem;
+}
+
+.btn {
+  border: 1px solid #334155;
+  border-radius: 10px;
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 0.6rem 0.9rem;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: linear-gradient(180deg, #2563eb, #1d4ed8);
+  border-color: #2563eb;
+}
+
+.btn-strong {
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.8rem 1.1rem;
+}
+
+.btn-danger {
+  background: #3f1d2e;
+  border-color: #9f1239;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.entity-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.entity-card {
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 0.75rem;
+  display: grid;
+  gap: 0.6rem;
+  background: #0f172a;
+}
+
+.progress-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.progress-item {
+  border: 1px solid #334155;
+  padding: 0.55rem 0.7rem;
+  border-radius: 10px;
+  color: #94a3b8;
+}
+
+.progress-item.done {
+  border-color: #1d4ed8;
+  color: #bfdbfe;
+}
+
+.progress-item.active {
+  border-color: #38bdf8;
+  color: #e0f2fe;
+}
+
+.result-card {
+  border-width: 2px;
+  border-color: #2563eb;
+}
+
+.warning {
+  color: #fcd34d;
+}
+
+.muted {
+  color: #94a3b8;
+}
+
+.error-card {
+  border-color: #9f1239;
+  background: #1a0f1a;
+}
+
+.entity-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.entity-asset-card {
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 0.75rem;
+  display: grid;
+  gap: 0.6rem;
+  background: #0f172a;
+}
+
+.scenario-text {
+  white-space: pre-wrap;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.debug-panel summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.debug-grid {
+  margin-top: 0.8rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+pre {
+  margin: 0;
+  background: #020617;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 0.6rem;
+  overflow: auto;
+  font-size: 0.85rem;
+}
+
+@media (min-width: 900px) {
+  .layout {
+    grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.8fr);
+    align-items: start;
+  }
+
+  .layout-side {
+    position: sticky;
+    top: 1rem;
+  }
+
+  .entity-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .debug-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
